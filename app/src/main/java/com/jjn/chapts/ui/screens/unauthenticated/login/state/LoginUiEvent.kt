@@ -1,7 +1,7 @@
-package com.jjn.composelogin.ui.screens.unauthenticated.login.state
+package com.jjn.chapts.ui.screens.unauthenticated.login.state
 
 /**
- * Login Screen Events
+ * 登录屏幕事件
  */
 sealed class LoginUiEvent {
     data class EmailOrMobileChanged(val inputValue: String) : LoginUiEvent()

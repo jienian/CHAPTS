@@ -1,16 +1,15 @@
-package com.jjn.composelogin.ui.screens
+package com.jjn.chapts.ui.screens
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.jjn.composelogin.ui.screens.dashboard.DashboardScreen
-import com.jjn.composelogin.ui.screens.unauthenticated.login.LoginScreen
-import com.jjn.composelogin.ui.screens.unauthenticated.registration.RegistrationScreen
+import com.jjn.chapts.ui.screens.dashboard.DashboardScreen
+import com.jjn.chapts.ui.screens.unauthenticated.login.LoginScreen
+import com.jjn.chapts.ui.screens.unauthenticated.registration.RegistrationScreen
 
 /**
- * Login, registration, forgot password screens nav graph builder
- * (Unauthenticated user)
+ *  创建一个导航图
  */
 fun NavGraphBuilder.unauthenticatedGraph(navController: NavController) {
 
@@ -55,7 +54,7 @@ fun NavGraphBuilder.unauthenticatedGraph(navController: NavController) {
 }
 
 /**
- * Authenticated screens nav graph builder
+ * 主页面
  */
 fun NavGraphBuilder.authenticatedGraph(navController: NavController) {
     navigation(

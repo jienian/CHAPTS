@@ -1,9 +1,10 @@
-package com.jjn.composelogin.ui.screens.unauthenticated.login.state
+package com.jjn.chapts.ui.screens.unauthenticated.login.state
 
-import com.jjn.composelogin.ui.common.state.ErrorState
+import com.jjn.chapts.ui.common.state.ErrorState
 
 /**
- * Login State holding ui input values
+ * 登录状态保存ui输入值
+ *
  */
 data class LoginState(
     val emailOrMobile: String = "",
@@ -13,8 +14,9 @@ data class LoginState(
 )
 
 /**
- * Error state in login holding respective
- * text field validation errors
+ * 错误状态登录持有各自
+ * 文本字段验证错误
+ *
  */
 data class LoginErrorState(
     val emailOrMobileErrorState: ErrorState = ErrorState(),

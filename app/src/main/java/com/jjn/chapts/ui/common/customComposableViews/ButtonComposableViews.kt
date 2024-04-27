@@ -1,4 +1,4 @@
-package com.jjn.composelogin.ui.common.customComposableViews
+package com.jjn.chapts.ui.common.customComposableViews
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
@@ -15,7 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.jjn.composelogin.ui.theme.AppTheme
+import com.jjn.chapts.ui.theme.AppTheme
 
 @Composable
 fun NormalButton(

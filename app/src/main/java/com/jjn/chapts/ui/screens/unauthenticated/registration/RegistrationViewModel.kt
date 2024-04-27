@@ -1,18 +1,14 @@
-package com.jjn.composelogin.ui.screens.unauthenticated.registration
+package com.jjn.chapts.ui.screens.unauthenticated.registration
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
-import com.jjn.composelogin.ui.common.state.ErrorState
-import com.jjn.composelogin.ui.screens.unauthenticated.registration.state.*
+import com.jjn.chapts.ui.common.state.ErrorState
+import com.jjn.chapts.ui.screens.unauthenticated.registration.state.*
 
 class RegistrationViewModel : ViewModel() {
-
     var registrationState = mutableStateOf(RegistrationState())
         private set
 
-    /**
-     * Function called on any login event [RegistrationUiEvent]
-     */
     fun onUiEvent(registrationUiEvent: RegistrationUiEvent) {
         when (registrationUiEvent) {
 
@@ -69,7 +65,7 @@ class RegistrationViewModel : ViewModel() {
                 )
             }
 
-            // Confirm Password changed event
+            //确认密码更改事件
             is RegistrationUiEvent.ConfirmPasswordChanged -> {
                 registrationState.value = registrationState.value.copy(
                     confirmPassword = registrationUiEvent.inputValue,
@@ -85,7 +81,6 @@ class RegistrationViewModel : ViewModel() {
                             registrationState.value.password.trim() != registrationUiEvent.inputValue -> {
                                 passwordMismatchErrorState
                             }
-
                             // Valid state
                             else -> ErrorState()
                         }
@@ -106,12 +101,7 @@ class RegistrationViewModel : ViewModel() {
         }
     }
 
-    /**
-     * Function to validate inputs
-     * Ideally it should be on domain layer (usecase)
-     * @return true -> inputs are valid
-     * @return false -> inputs are invalid
-     */
+
     private fun validateInputs(): Boolean {
         val emailString = registrationState.value.emailId.trim()
         val mobileNumberString = registrationState.value.mobileNumber.trim()

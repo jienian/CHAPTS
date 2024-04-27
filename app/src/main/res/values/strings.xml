@@ -1,49 +1,41 @@
 <resources>
-    <string name="app_name">ComposeLogin</string>
-
-    <string name="jetpack_compose">Jetpack Compose</string>
+    <string name="app_name">CHAPTS</string>
 
     <string name="empty_string" />
 
-    <string name="navigate_back">Navigate to the previous screen</string>
+    <string name="navigate_back">导航到上一个屏幕</string>
 
-    <!--Login-->
     <string name="login_heading_text">登录账号</string>
     <string name="login_heading_text_hide">数字家人，温暖陪伴，让爱无处不在!</string>
 
     <string name="login_email_id_or_phone_label">账号/手机号/邮箱</string>
     <string name="login_password_label">密码</string>
     <string name="login_button_text">登录</string>
-    <string name="forgot_password">Forgot Password?</string>
-    <string name="icon_password_visible">Password Visible</string>
-    <string name="icon_password_hidden">Password Hidden</string>
+    <string name="forgot_password">忘记密码</string>
+    <string name="icon_password_visible">密码可见</string>
+    <string name="icon_password_hidden">密码隐藏</string>
 
-    <!--Login Error Messages-->
-    <string name="login_error_msg_empty_email_mobile">Please enter your email or mobile number</string>
-    <string name="login_error_msg_empty_password">Please enter your password</string>
+    <string name="login_error_msg_empty_email_mobile">请输入您的电子邮件或手机号码</string>
+    <string name="login_error_msg_empty_password">请输入您的密码</string>
 
-    <!--Login Page - Register Section-->
-    <string name="do_not_have_account">Don\'t have an account?</string>
-    <string name="register">Register</string>
+    <string name="do_not_have_account">你没有账号吗？</string>
+    <string name="register">注册</string>
 
-    <!--Registration-->
-    <string name="registration_heading_text">Registration</string>
-    <string name="registration_email_label">Email ID</string>
-    <string name="registration_mobile_label">Mobile Number</string>
-    <string name="registration_password_label">Password</string>
-    <string name="registration_confirm_password_label">Confirm Password</string>
-    <string name="registration_button_text">Register</string>
-    <string name="back_to_login">Back to Login</string>
+    <string name="registration_heading_text">注册账号</string>
+    <string name="registration_email_label">账号</string>
+    <string name="registration_mobile_label">手机号码</string>
+    <string name="registration_password_label">密码</string>
+    <string name="registration_confirm_password_label">确认密码</string>
+    <string name="registration_button_text">点击注册</string>
+    <string name="back_to_login">确认返回登录</string>
 
-    <!--Registration Error Messages-->
-    <string name="registration_error_msg_empty_email">Please enter your email id</string>
-    <string name="registration_error_msg_empty_mobile">Please enter your mobile number</string>
-    <string name="registration_error_msg_empty_password">Please enter your password</string>
-    <string name="registration_error_msg_empty_confirm_password">Please confirm your password</string>
-    <string name="registration_error_msg_password_mismatch">Please enter the same password here as above</string>
+    <string name="registration_error_msg_empty_email">请输入您的电子邮件id</string>
+    <string name="registration_error_msg_empty_mobile">请输入您的手机号码</string>
+    <string name="registration_error_msg_empty_password">请输入您的密码</string>
+    <string name="registration_error_msg_empty_confirm_password">请确认您的密码</string>
+    <string name="registration_error_msg_password_mismatch">请在此处输入与上面相同的密码</string>
 
-    <!--Dashboard-->
-    <string name="dashboard_title_welcome_user">Welcome User</string>
+    <string name="dashboard_title_welcome_user">欢迎Main User</string>
 
 
 </resources>

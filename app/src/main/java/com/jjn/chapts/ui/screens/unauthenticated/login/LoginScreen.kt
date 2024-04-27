@@ -1,4 +1,4 @@
-package com.jjn.composelogin.ui.screens.unauthenticated.login
+package com.jjn.chapts.ui.screens.unauthenticated.login
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -21,10 +21,12 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import coil.size.Scale
-import com.jjn.composelogin.ui.common.customComposableViews.TitleText
-import com.jjn.composelogin.ui.screens.unauthenticated.login.state.LoginUiEvent
-import com.jjn.composelogin.ui.theme.AppTheme
-import com.jjn.composelogin.ui.theme.ComposeLoginTheme
+import com.jjn.chapts.ui.common.customComposableViews.HintText
+import com.jjn.chapts.ui.common.customComposableViews.TitleText
+import com.jjn.chapts.ui.screens.unauthenticated.login.state.LoginUiEvent
+import com.jjn.chapts.ui.theme.AppTheme
+import com.jjn.chapts.ui.theme.ComposeLoginTheme
+import com.jodhpurtechies.composelogin.R
 
 @Composable
 fun LoginScreen(
@@ -40,8 +42,8 @@ fun LoginScreen(
 
     if (loginState.isLoginSuccessful) {
         /**
-         * Navigate to Authenticated navigation route
-         * once login is successful
+         *导航到经过身份验证的导航路线
+         *登录成功后
          */
         LaunchedEffect(key1 = true) {
             onNavigateToAuthenticatedRoute.invoke()
@@ -58,7 +60,6 @@ fun LoginScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
-            // Main card Content for Login
             ElevatedCard(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -70,14 +71,6 @@ fun LoginScreen(
                         .padding(bottom = AppTheme.dimens.paddingExtraLarge)
                 ) {
 
-                    // Heading Jetpack Compose
-                    /*      MediumTitleText(
-                              modifier = Modifier
-                                  .padding(top = AppTheme.dimens.paddingLarge)
-                                  .fillMaxWidth(),
-                              text = stringResource(id = R.string.jetpack_compose),
-                              textAlign = TextAlign.Center
-                          )*/
 
                     // Login Logo
                     AsyncImage(
@@ -98,7 +91,7 @@ fun LoginScreen(
                         modifier = Modifier.padding(top = AppTheme.dimens.paddingLarge),
                         text = stringResource(id = R.string.login_heading_text)
                     )
-                    TitleText(
+                    HintText(
                         modifier = Modifier.padding(top = AppTheme.dimens.paddingLarge),
                         text = stringResource(id = R.string.login_heading_text_hide)
                     )
@@ -135,7 +128,6 @@ fun LoginScreen(
                 horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Don't have an account?
                 Text(text = stringResource(id = R.string.do_not_have_account))
 
                 //Register

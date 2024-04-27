@@ -1,4 +1,5 @@
-package com.jjn.composelogin.ui.common.customComposableViews
+package com.jjn.chapts.ui.common.customComposableViews
+import androidx.compose.ui.graphics.Color
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -16,11 +17,28 @@ fun TitleText(
         modifier = modifier,
         text = text,
         textAlign = textAlign,
-        style = MaterialTheme.typography.headlineLarge,
-        color = MaterialTheme.colorScheme.secondary
+        //style = MaterialTheme.typography.headlineLarge,
+        style = MaterialTheme.typography.headlineLarge.copy(color = Color.Black),
+              //  color = MaterialTheme.colorScheme.secondary
+
     )
 }
 
+@Composable
+fun HintText(
+    modifier: Modifier = Modifier,
+    text: String,
+    textAlign: TextAlign = TextAlign.Start
+) {
+    Text(
+        text = text,
+        modifier = modifier,
+        textAlign = textAlign,
+        style = MaterialTheme.typography.bodyLarge.copy(color = Color.Gray,
+            fontSize = MaterialTheme.typography.bodyLarge.fontSize * 1.0, // Reduce font size
+        )
+    )
+}
 /*@Composable
 fun MediumTitleText(
     modifier: Modifier = Modifier,

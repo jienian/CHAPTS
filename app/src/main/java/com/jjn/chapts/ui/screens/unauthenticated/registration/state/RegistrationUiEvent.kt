@@ -1,4 +1,4 @@
-package com.jjn.composelogin.ui.screens.unauthenticated.registration.state
+package com.jjn.chapts.ui.screens.unauthenticated.registration.state
 
 /**
  * Registration Screen Events

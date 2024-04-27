@@ -1,9 +1,9 @@
-package com.jjn.composelogin.ui.screens.unauthenticated.registration.state
+package com.jjn.chapts.ui.screens.unauthenticated.registration.state
 
-import com.jjn.composelogin.ui.common.state.ErrorState
+import com.jjn.chapts.ui.common.state.ErrorState
 
 /**
- * Registration State holding ui input values
+ * 登录屏幕事件登录事件
  */
 data class RegistrationState(
     val emailId: String = "",
@@ -15,8 +15,8 @@ data class RegistrationState(
 )
 
 /**
- * Error state in registration holding respective
- * text field validation errors
+ *注册持有各自的错误状态
+ *文本字段验证错误
  */
 data class RegistrationErrorState(
     val emailIdErrorState: ErrorState = ErrorState(),

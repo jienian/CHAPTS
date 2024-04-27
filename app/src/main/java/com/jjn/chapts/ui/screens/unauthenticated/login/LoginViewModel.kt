@@ -1,21 +1,16 @@
-package com.jjn.composelogin.ui.screens.unauthenticated.login
+package com.jjn.chapts.ui.screens.unauthenticated.login
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
-import com.jjn.composelogin.ui.common.state.ErrorState
-import com.jjn.composelogin.ui.screens.unauthenticated.login.state.*
+import com.jjn.chapts.ui.common.state.ErrorState
+import com.jjn.chapts.ui.screens.unauthenticated.login.state.*
 
-/**
- * ViewModel for Login Screen
- */
 class LoginViewModel : ViewModel() {
 
     var loginState = mutableStateOf(LoginState())
         private set
 
-    /**
-     * Function called on any login event [LoginUiEvent]
-     */
+
     fun onUiEvent(loginUiEvent: LoginUiEvent) {
         when (loginUiEvent) {
 
@@ -56,12 +51,6 @@ class LoginViewModel : ViewModel() {
         }
     }
 
-    /**
-     * Function to validate inputs
-     * Ideally it should be on domain layer (usecase)
-     * @return true -> inputs are valid
-     * @return false -> inputs are invalid
-     */
     private fun validateInputs(): Boolean {
         val emailOrMobileString = loginState.value.emailOrMobile.trim()
         val passwordString = loginState.value.password

@@ -1,4 +1,4 @@
-package com.jjn.composelogin.ui.common.customComposableViews
+package com.jjn.chapts.ui.common.customComposableViews
 
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions

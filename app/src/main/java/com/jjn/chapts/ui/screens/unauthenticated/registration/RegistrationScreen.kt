@@ -1,4 +1,4 @@
-package com.jjn.composelogin.ui.screens.unauthenticated.registration
+package com.jjn.chapts.ui.screens.unauthenticated.registration
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -14,11 +14,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.jjn.composelogin.ui.common.customComposableViews.SmallClickableWithIconAndText
-import com.jjn.composelogin.ui.common.customComposableViews.TitleText
-import com.jjn.composelogin.ui.screens.unauthenticated.registration.state.RegistrationUiEvent
-import com.jjn.composelogin.ui.theme.AppTheme
-import com.jjn.composelogin.ui.theme.ComposeLoginTheme
+import com.jjn.chapts.ui.common.customComposableViews.HintText
+import com.jjn.chapts.ui.common.customComposableViews.SmallClickableWithIconAndText
+import com.jjn.chapts.ui.common.customComposableViews.TitleText
+import com.jjn.chapts.ui.screens.unauthenticated.registration.state.RegistrationUiEvent
+import com.jjn.chapts.ui.theme.AppTheme
+import com.jjn.chapts.ui.theme.ComposeLoginTheme
+import com.jodhpurtechies.composelogin.R
 
 @Composable
 fun RegistrationScreen(
@@ -74,6 +76,10 @@ fun RegistrationScreen(
                     TitleText(
                         modifier = Modifier.padding(top = AppTheme.dimens.paddingLarge),
                         text = stringResource(id = R.string.registration_heading_text)
+                    )
+                    HintText(
+                        modifier = Modifier.padding(top = AppTheme.dimens.paddingLarge),
+                        text = stringResource(id = R.string.login_heading_text_hide)
                     )
 
                     /**

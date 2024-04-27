@@ -1,7 +1,7 @@
-package com.jjn.composelogin.ui.common.state
+package com.jjn.chapts.ui.common.state
 
 import androidx.annotation.StringRes
-import com.jjn.composelogin.R
+import com.jodhpurtechies.composelogin.R
 
 /**
  * Error state holding values for error ui

@@ -1,4 +1,4 @@
-package com.jjn.composelogin.ui.screens.dashboard
+package com.jjn.chapts.ui.screens.dashboard
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -7,8 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import com.jjn.composelogin.R
-import com.jjn.composelogin.ui.common.customComposableViews.TitleText
+import com.jjn.chapts.ui.common.customComposableViews.TitleText
+import com.jodhpurtechies.composelogin.R
 
 @Composable
 fun DashboardScreen() {

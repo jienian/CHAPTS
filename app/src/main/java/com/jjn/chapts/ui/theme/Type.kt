@@ -1,4 +1,4 @@
-package com.jjn.composelogin.ui.theme
+package com.jjn.chapts.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

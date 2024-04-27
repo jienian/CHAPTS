@@ -1,4 +1,4 @@
-package com.jjn.composelogin
+package com.jjn.chapts
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

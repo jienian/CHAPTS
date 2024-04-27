@@ -1,4 +1,4 @@
-package com.jjn.composelogin.ui.theme
+package com.jjn.chapts.ui.theme
 
 import android.app.Activity
 import android.os.Build

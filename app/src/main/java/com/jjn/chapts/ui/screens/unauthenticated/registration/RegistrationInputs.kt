@@ -1,19 +1,21 @@
-package com.jjn.composelogin.ui.screens.unauthenticated.registration
+package com.jjn.chapts.ui.screens.unauthenticated.registration
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
-import com.jjn.composelogin.R
-import com.jjn.composelogin.ui.common.customComposableViews.EmailTextField
-import com.jjn.composelogin.ui.common.customComposableViews.MobileNumberTextField
-import com.jjn.composelogin.ui.common.customComposableViews.NormalButton
-import com.jjn.composelogin.ui.common.customComposableViews.PasswordTextField
-import com.jjn.composelogin.ui.screens.unauthenticated.registration.state.RegistrationState
-import com.jjn.composelogin.ui.theme.AppTheme
+import com.jjn.chapts.ui.common.customComposableViews.EmailTextField
+import com.jjn.chapts.ui.common.customComposableViews.MobileNumberTextField
+import com.jjn.chapts.ui.common.customComposableViews.NormalButton
+import com.jjn.chapts.ui.common.customComposableViews.PasswordTextField
+import com.jjn.chapts.ui.screens.unauthenticated.registration.state.RegistrationState
+import com.jjn.chapts.ui.theme.AppTheme
+import com.jodhpurtechies.composelogin.R
 
 @Composable
 fun RegistrationInputs(
@@ -24,10 +26,8 @@ fun RegistrationInputs(
     onConfirmPasswordChange: (String) -> Unit,
     onSubmit: () -> Unit,
 ) {
-    // Login Inputs Section
     Column(modifier = Modifier.fillMaxWidth()) {
 
-        // Email ID
         EmailTextField(
             modifier = Modifier
                 .fillMaxWidth()
@@ -40,7 +40,6 @@ fun RegistrationInputs(
             imeAction = ImeAction.Next
         )
 
-        // Mobile Number
         MobileNumberTextField(
             modifier = Modifier
                 .fillMaxWidth()
@@ -51,6 +50,7 @@ fun RegistrationInputs(
             isError = registrationState.errorState.mobileNumberErrorState.hasError,
             errorText = stringResource(id = registrationState.errorState.mobileNumberErrorState.errorMessageStringResource),
             imeAction = ImeAction.Next
+
         )
 
 
@@ -82,7 +82,10 @@ fun RegistrationInputs(
 
         // Registration Submit Button
         NormalButton(
-            modifier = Modifier.padding(top = AppTheme.dimens.paddingExtraLarge),
+            modifier = Modifier
+                .fillMaxWidth()
+                .wrapContentSize(Alignment.Center)
+                .padding(top = AppTheme.dimens.paddingLarge),
             text = stringResource(id = R.string.registration_button_text),
             onClick = onSubmit
         )

@@ -1,9 +1,10 @@
-package com.jjn.composelogin.ui.screens.unauthenticated.login
+package com.jjn.chapts.ui.screens.unauthenticated.login
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -12,12 +13,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
-import com.jjn.composelogin.R
-import com.jjn.composelogin.ui.common.customComposableViews.EmailTextField
-import com.jjn.composelogin.ui.common.customComposableViews.NormalButton
-import com.jjn.composelogin.ui.common.customComposableViews.PasswordTextField
-import com.jjn.composelogin.ui.screens.unauthenticated.login.state.LoginState
-import com.jjn.composelogin.ui.theme.AppTheme
+import com.jjn.chapts.ui.common.customComposableViews.EmailTextField
+import com.jjn.chapts.ui.common.customComposableViews.NormalButton
+import com.jjn.chapts.ui.common.customComposableViews.PasswordTextField
+import com.jjn.chapts.ui.screens.unauthenticated.login.state.LoginState
+import com.jjn.chapts.ui.theme.AppTheme
+import com.jodhpurtechies.composelogin.R
 
 @Composable
 fun LoginInputs(
@@ -28,7 +29,6 @@ fun LoginInputs(
     onForgotPasswordClick: () -> Unit
 ) {
 
-    // Login Inputs Section
     Column(modifier = Modifier.fillMaxWidth()) {
 
         // Email or Mobile Number
@@ -71,9 +71,12 @@ fun LoginInputs(
             style = MaterialTheme.typography.bodyMedium
         )
 
-        // Login Submit Button
+        // Login Submit bt
         NormalButton(
-            modifier = Modifier.padding(top = AppTheme.dimens.paddingLarge),
+            modifier = Modifier
+                .fillMaxWidth()
+                .wrapContentSize(Alignment.Center)
+                .padding(top = AppTheme.dimens.paddingLarge),
             text = stringResource(id = R.string.login_button_text),
             onClick = onSubmit
         )

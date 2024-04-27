@@ -1,4 +1,4 @@
-package com.jjn.composelogin
+package com.jjn.chapts
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,10 +12,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.jjn.composelogin.ui.screens.NavigationRoutes
-import com.jjn.composelogin.ui.screens.authenticatedGraph
-import com.jjn.composelogin.ui.screens.unauthenticatedGraph
-import com.jjn.composelogin.ui.theme.ComposeLoginTheme
+import com.jjn.chapts.ui.screens.NavigationRoutes
+import com.jjn.chapts.ui.screens.authenticatedGraph
+import com.jjn.chapts.ui.screens.unauthenticatedGraph
+import com.jjn.chapts.ui.theme.ComposeLoginTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,10 +49,8 @@ fun MainAppNavHost(
         navController = navController,
         startDestination = NavigationRoutes.Unauthenticated.NavigationRoute.route
     ) {
-        // Unauthenticated user flow screens
         unauthenticatedGraph(navController = navController)
 
-        // Authenticated user flow screens
         authenticatedGraph(navController = navController)
     }
 

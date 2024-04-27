@@ -1,7 +1,7 @@
-package com.jjn.composelogin.ui.screens.unauthenticated.login.state
+package com.jjn.chapts.ui.screens.unauthenticated.login.state
 
-import com.jjn.composelogin.R
-import com.jjn.composelogin.ui.common.state.ErrorState
+import com.jjn.chapts.ui.common.state.ErrorState
+import com.jodhpurtechies.composelogin.R
 
 val emailOrMobileEmptyErrorState = ErrorState(
     hasError = true,
